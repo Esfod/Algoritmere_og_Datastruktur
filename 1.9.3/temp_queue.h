@@ -3,6 +3,7 @@ template <class T>
 class temp_queue
 {
 public:
+	temp_queue() = delete;
 	temp_queue(const int& size);
 	~temp_queue();
 	void push(const T& a);

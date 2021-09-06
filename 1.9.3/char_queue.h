@@ -2,8 +2,9 @@
 class char_queue
 {
 public:
-	~char_queue();
+	char_queue() = delete;
 	char_queue(const int& size);
+	~char_queue();
 	void push(const char& ch);
 	void pop();
 	char front();

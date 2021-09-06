@@ -11,7 +11,6 @@ template<class T>
 temp_queue<T>::~temp_queue()
 {
 	delete[] m_data;
-	m_size = m_front = m_back = 0;
 }
 
 template<class T>

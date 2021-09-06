@@ -9,7 +9,6 @@ char_queue::char_queue(const int& size) : m_size(0), m_front(0), m_back(0), m_ma
 char_queue::~char_queue()
 {
 	delete [] m_data;
-	m_size = m_front = m_back = 0;
 }
 
 void char_queue::push(const char& ch)
