@@ -8,7 +8,8 @@ char_queue::char_queue(const int& size) : m_size(0), m_front(0), m_back(0), m_ma
 
 char_queue::~char_queue()
 {
-	delete[] m_data;
+	delete [] m_data;
+	m_size = m_front = m_back = 0;
 }
 
 void char_queue::push(const char& ch)
@@ -19,8 +20,7 @@ void char_queue::push(const char& ch)
 		return;
 	}
 
-
-	m_data[m_size] = ch;
+	m_data[m_back] = ch;
 	m_back++;
 	m_size++;
 }
@@ -32,12 +32,13 @@ void char_queue::pop()
 		std::cout << "\n the queue is empty";
 		return;
 	}
-	/*
-	for (int i = 0; i < m_size-1; i++)
+
+	for (auto i = 0; i < m_size; i++)
 	{
 		m_data[i] = m_data[i + 1];
-	}*/
-	m_front++;
+	}
+
+	m_back--;
 	m_size--;
 }
 
@@ -57,4 +58,10 @@ bool char_queue::empty()
 {
 	if (m_size > 0) return false;
 	return true;
+}
+
+char char_queue::getdata(int a)
+{
+	if (a >= m_back) return false;
+	else return m_data[a];
 }

@@ -1,0 +1,6 @@
+﻿  main.cpp
+  temp_queue.cpp
+  Generating Code...
+main.obj : error LNK2019: unresolved external symbol "public: __cdecl temp_queue<char>::temp_queue<char>(int const &)" (??0?$temp_queue@D@@QEAA@AEBH@Z) referenced in function main
+main.obj : error LNK2019: unresolved external symbol "public: __cdecl temp_queue<char>::~temp_queue<char>(void)" (??1?$temp_queue@D@@QEAA@XZ) referenced in function main
+C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\x64\Debug\1.9.3.exe : fatal error LNK1120: 2 unresolved externals

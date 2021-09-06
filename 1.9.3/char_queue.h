@@ -9,6 +9,7 @@ public:
 	char front();
 	int size();
 	bool empty();
+	char getdata(int a);
 private:
 	char* m_data;
 	int m_front;

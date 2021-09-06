@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="char_queue.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="temp_queue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="char_queue.h" />
+    <ClInclude Include="temp_queue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

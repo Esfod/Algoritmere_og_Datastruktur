@@ -3,7 +3,8 @@
 #include <chrono>
 #include <algorithm>
 
-const int array_size {100000};
+
+const int array_size {10000};
 const int loop{ 10 };
 
 void selection_sort(std::array<int, array_size>& a)
@@ -34,9 +35,8 @@ int main()
 		for (auto j = 0; j < array_size; j++) { a_array[j] = rand()% 20 + 1; }
 
 		auto start = std::chrono::high_resolution_clock::now(); //starts the counting
-		std::sort(a_array.begin(), a_array.end()); //bulit inn sort function
-		//selection_sort(a_array);
-
+		//std::sort(a_array.begin(), a_array.end()); //bulit inn sort function
+		selection_sort(a_array);
 		auto finish = std::chrono::high_resolution_clock::now();
 
 		std::chrono::duration<double> timewatch = finish - start;
