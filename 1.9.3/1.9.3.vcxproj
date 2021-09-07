@@ -141,7 +141,6 @@
   <ItemGroup>
     <ClCompile Include="char_queue.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="temp_queue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="char_queue.h" />

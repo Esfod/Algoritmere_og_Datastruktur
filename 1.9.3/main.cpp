@@ -6,7 +6,6 @@
 
 int main()
 {
-	/*
 	std::cout << "\nChar queue\n";
 	char_queue c_queue(6);
 	c_queue.push('a');
@@ -19,11 +18,10 @@ int main()
 	std::cout << "the size of this queue is " << c_queue.size() << std::endl;
 	if (c_queue.empty()) std::cout << "c_queue is empty" << std::endl;
 	else if (!c_queue.empty()) std::cout << "c_queue is not empty" << std::endl;
-	*/
+	
 	
 	std::cout << "\nTemplate queue\n";
-	temp_queue<char> t_queue();
-	/*
+	temp_queue<char> t_queue(5);
 	t_queue.push('a');
 	t_queue.push('b');
 	t_queue.push('c');
@@ -32,10 +30,16 @@ int main()
 	std::cout << t_queue.getdata(2) << std::endl;
 	t_queue.pop();
 	std::cout << t_queue.getdata(1) << std::endl;
+	t_queue.push('d');
+	t_queue.push('e');
 
 	std::cout << "the size of this queue is " << t_queue.size() << std::endl;
 	if (t_queue.empty()) std::cout << "t_queue is empty" << std::endl;
 	else if (!t_queue.empty()) std::cout << "t_queue is not empty" << std::endl;
-	*/
+
+	for (auto i = 0; i < t_queue.size(); i++)
+	{
+		std::cout << t_queue.getdata(i) << " ";
+	}
 	return 0;
 }
