@@ -1,3 +1,7 @@
-﻿  main.cpp
-C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\1.9.3\temp_queue.h(77): warning C4715: 'temp_queue<char>::front': not all control paths return a value
-  1.9.3.vcxproj -> C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\x64\Debug\1.9.3.exe
+﻿  char_queue.cpp
+  main.cpp
+  Generating Code...
+C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\1.9.3\temp_queue.h(77): warning C4715: 'temp_queue<char>::front': not all control paths return a value
+C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\1.9.3\char_queue.cpp(50): warning C4715: 'char_queue::front': not all control paths return a value
+  LINK : C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\x64\Debug\1.9.3.exe not found or not built by the last incremental link; performing full link
+  1.9.3.vcxproj -> C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\x64\Debug\1.9.3.exe

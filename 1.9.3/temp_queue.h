@@ -4,12 +4,6 @@
 template <class T>
 class temp_queue
 {
-private:
-	T* m_data;
-	int m_front;
-	int m_back;
-	int m_size;
-	int m_max_size;
 public:
 	temp_queue(const int& size);
 	~temp_queue();
@@ -19,7 +13,12 @@ public:
 	int size();
 	bool empty();
 	T getdata(int a);
-
+private:
+	T* m_data;
+	int m_front;
+	int m_back;
+	int m_size;
+	int m_max_size;
 };
 
 
