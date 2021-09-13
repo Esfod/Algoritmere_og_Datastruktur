@@ -4,7 +4,7 @@
 #include <algorithm>
 
 
-const int array_size {10000};
+const int array_size {10};
 const int loop{ 10 };
 
 void selection_sort(std::array<int, array_size>& a)

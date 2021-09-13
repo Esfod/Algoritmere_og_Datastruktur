@@ -7,7 +7,7 @@ int main()
     //Stakk .cpp & .h for to see the class
 
     ADS101::Stakk* cup = new ADS101::Stakk;
-    cup->push('a');
+    cup->push('a'); //adds a b c to the stack
     cup->push('b');
     cup->push('c');
 

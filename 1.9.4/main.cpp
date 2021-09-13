@@ -4,7 +4,7 @@
 
 int main()
 {
-	std::cout << "\nthar_Stakk\n";
+	std::cout << "\nchar_Stakk\n";
 	char_stakk c_stakk(6);
 	c_stakk.push('a');
 	c_stakk.push('b');

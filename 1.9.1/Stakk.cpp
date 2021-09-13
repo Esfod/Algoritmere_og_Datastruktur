@@ -18,12 +18,12 @@ namespace ADS101
 
 	void Stakk::push(const char& ch)
 	{
-		CharNode* ny = new CharNode(ch);
-		if (m_top != nullptr)
+		CharNode* ny = new CharNode(ch); //creats a new obj of CharNode
+		if (m_top != nullptr) //checks if it is an value under m_top
 			ny->settNeste(m_top);
-		m_top = ny;
-		if (m_top == nullptr)
+		else if (m_top == nullptr)
 			m_bottom = m_top;
+		m_top = ny;
 	}
 
 	void Stakk::pop()

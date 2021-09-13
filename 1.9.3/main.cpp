@@ -27,9 +27,9 @@ int main()
 	t_queue.push('c');
 	std::cout << "The first varible is " << t_queue.front() << std::endl;
 	t_queue.pop();
-	std::cout << t_queue.getdata(2) << std::endl;
-	t_queue.pop();
 	std::cout << t_queue.getdata(1) << std::endl;
+	t_queue.pop();
+	std::cout << t_queue.getdata(0) << std::endl;
 	t_queue.push('d');
 	t_queue.push('e');
 
