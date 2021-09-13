@@ -1,4 +1,6 @@
-﻿  Node.cpp
+﻿  main.cpp
+  Node.cpp
   Stakk.cpp
   Generating Code...
-  1.9.1.vcxproj -> C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\x64\Debug\1.9.1.exe
+  LINK : C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\x64\Debug\1.9.1.exe not found or not built by the last incremental link; performing full link
+  1.9.1.vcxproj -> C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\x64\Debug\1.9.1.exe

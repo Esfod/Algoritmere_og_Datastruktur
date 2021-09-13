@@ -1,3 +1,3 @@
 ﻿  main.cpp
-C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\1.9.3\temp_queue.h(76): warning C4715: 'temp_queue<char>::front': not all control paths return a value
-  1.9.3.vcxproj -> C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\x64\Debug\1.9.3.exe
+C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\1.9.3\temp_queue.h(69): warning C4715: 'temp_queue<char>::front': not all control paths return a value
+  1.9.3.vcxproj -> C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\x64\Debug\1.9.3.exe

@@ -6,7 +6,6 @@ class temp_queue
 {
 public:
 	temp_queue(const int& size);
-	~temp_queue();
 	void push(T a);
 	void pop();
 	T front();
@@ -26,12 +25,6 @@ template<class T>
 temp_queue<T>::temp_queue(const int& size) : m_size(0), m_front(0), m_back(0), m_max_size(size)
 {
 	m_data = new T[size];
-}
-
-template<class T>
-temp_queue<T>::~temp_queue()
-{
-	delete[] m_data;
 }
 
 template<class T>
