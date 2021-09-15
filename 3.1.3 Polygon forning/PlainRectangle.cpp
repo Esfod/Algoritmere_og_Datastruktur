@@ -33,7 +33,7 @@ void PlainRectangle::makeRectangle(const Vector2d& v1, const Vector2d& v2, const
 	m_rectangles.push_back(PlainRectangle(v1, v2, v3, v4));
 }
 
-double PlainRectangle::getAreal(Vector2d& a, Vector2d& b, Vector2d& c, Vector2d& d)
+double PlainRectangle::getAreal(const Vector2d& a, const Vector2d& b, const Vector2d& c, const Vector2d& d)
 {
 	Vector2d v1 = (a + b);
 	Vector2d v2 = (d + a);
@@ -55,12 +55,11 @@ void PlainRectangle::print() const
 	for(auto it = m_rectangles.begin(); it != m_rectangles.end(); it++)
 	{
 		auto t = *it;
-		double da = getAreal(t.m_v1, t.m_v2, t.m_v3, t.m_v4);
 		std::cout << " ( " << t.m_v1.x << " , " << t.m_v1.y << " ) ";
 		std::cout << " ( " << t.m_v2.x << " , " << t.m_v2.y << " ) ";
 		std::cout << " ( " << t.m_v3.x << " , " << t.m_v3.y << " ) ";
 		std::cout << " ( " << t.m_v4.x << " , " << t.m_v4.y << " ) ";
-		std::cout << " Area is : ";
+		//std::cout << " Area is : " << getAreal(t.m_v1, t.m_v2, t.m_v3, t.m_v4);;
 		std::cout << std::endl;
 	}
 }
