@@ -11,6 +11,13 @@ int main(int argc, char *argv[])
 	btre = new BinaryNode('i', btre, h);
 	btre = new BinaryNode('f', v, btre);
 
-	btre->intrav();
+	btre->re_intrav();
+	std::cout << std::endl;
+	btre->nre_intrav();
+	std::cout << "\nrepost" << std::endl;
+	btre->re_potrav();
+	std::cout << std::endl;
+	btre->nre_potrav();
+	std::cout << "\nnumber of nodes is: " << btre->num_Node() << std::endl;
 
 }

@@ -3,16 +3,18 @@ class BinaryNode
 {
 public:
 	BinaryNode();
-	BinaryNode(char data, BinaryNode* left = nullptr,
-		BinaryNode* right = nullptr);
+	BinaryNode(char data, BinaryNode* left = nullptr, BinaryNode* right = nullptr);
 	char getData();
 	//void print();
 	BinaryNode* find(char data);
 	void insert(char data);
-	void intrav();
+	void re_intrav();
+	void nre_intrav();
+	void nre_potrav();
+	void re_potrav();
+	int num_Node();
 private:
 	char m_data;
 	BinaryNode* m_left;
 	BinaryNode* m_right;
 };
-
