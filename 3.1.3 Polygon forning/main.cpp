@@ -10,7 +10,8 @@ int main()
 	Vector2d c{ 1 , 1 };
 	Vector2d d{ 0 , 1 };
 	PlainRectangle rect( a , b , c , d );
-	rect.subDivide(a, b, c, d, 2);
+	//rect.subDivide(a, b, c, d, 2);
+	rect.subDivide(a, b, c, d, 0.9);
 	rect.print();
 	return 0;
 }
