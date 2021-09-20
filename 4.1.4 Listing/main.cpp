@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
 	btre->re_potrav();
 	std::cout << std::endl;
 	btre->nre_potrav();
-	std::cout << "\nnumber of nodes is: " << btre->num_Node() << std::endl;
+	std::cout << "\nnumber of nodes is: " << btre->size() << std::endl;
+	std::cout << "\nThe hight is: " << btre->hight() << std::endl;
 
 }

@@ -38,6 +38,9 @@ void BinaryNode::insert(char data)
 	}
 }
 
+
+
+
 void BinaryNode::re_intrav()
 {
 	if (m_left)
@@ -106,7 +109,7 @@ void BinaryNode::nre_potrav()
 	}
 }
 
-int BinaryNode::num_Node()
+int BinaryNode::size()
 {
 	std::stack<BinaryNode*> stakk;
 	BinaryNode* p{ this };
@@ -126,4 +129,10 @@ int BinaryNode::num_Node()
 		i++;
 	} while (!stakk.empty() || p != nullptr);
 	return i;
+}
+
+int  BinaryNode::hight()
+{
+	int h;
+	return h;
 }

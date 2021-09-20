@@ -12,7 +12,8 @@ public:
 	void nre_intrav();
 	void nre_potrav();
 	void re_potrav();
-	int num_Node();
+	int size();
+	int hight();
 private:
 	char m_data;
 	BinaryNode* m_left;
