@@ -133,6 +133,6 @@ int BinaryNode::size()
 
 int  BinaryNode::hight()
 {
-	int h;
+	int h {0};
 	return h;
 }
