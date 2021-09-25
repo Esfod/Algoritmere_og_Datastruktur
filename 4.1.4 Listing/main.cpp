@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
 	std::cout << std::endl;
 	btre->nre_potrav();
 	std::cout << "\nnumber of nodes is: " << btre->size() << std::endl;
-	std::cout << "\nThe hight is: " << btre->hight() << std::endl;
-
+	std::cout << "\nThe height is: " << btre->findHeight(btre) << std::endl;
+	bool IsBalanced{ btre->IsBineryTreeBalanced(btre) };
+	if(IsBalanced) std::cout << "\nThis binarythree is Balanced" << std::endl;
+	else std::cout << "\nThis binarythree not is Balanced" << std::endl;
 }

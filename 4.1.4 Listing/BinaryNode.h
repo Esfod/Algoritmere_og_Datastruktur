@@ -13,7 +13,10 @@ public:
 	void nre_potrav();
 	void re_potrav();
 	int size();
-	int hight();
+	char findMax(char a, char b);
+	int findHeight(BinaryNode* p);
+	bool IsBineryTreeBalanced(BinaryNode* p);
+
 private:
 	char m_data;
 	BinaryNode* m_left;
