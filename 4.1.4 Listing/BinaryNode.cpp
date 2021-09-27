@@ -7,6 +7,9 @@ BinaryNode::BinaryNode() {}
 
 BinaryNode::BinaryNode(char data, BinaryNode* left, BinaryNode* right) : m_data{ data }, m_right{ right }, m_left{left} { }
 
+BinaryNode::BinaryNode(BinaryNode* over, char data, BinaryNode* left, BinaryNode* right) : m_data{ data }, m_over{over}, m_right{ right }, m_left{ left } {}
+
+
 char BinaryNode::getData() { return m_data; }
 
 BinaryNode *BinaryNode::find(char data)
@@ -20,21 +23,21 @@ BinaryNode *BinaryNode::find(char data)
 	return nullptr;
 }
 
-void BinaryNode::insert(char data)
+void BinaryNode::insert(char data, BinaryNode* p)
 {
 	if (data < m_data)
 	{
 		if (m_left)
-			m_left->insert(data);
+			m_left->insert(data, this);
 		else
-			m_left = new BinaryNode(data);
+			m_left = new BinaryNode(p, data);
 	}
 	else if (data > m_data)
 	{
 		if (m_right)
-			m_right->insert(data);
+			m_right->insert(data, this);
 		else
-			m_right = new BinaryNode(data);
+			m_right = new BinaryNode(p, data);
 	}
 }
 

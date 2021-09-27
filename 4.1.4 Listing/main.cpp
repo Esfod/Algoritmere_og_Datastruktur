@@ -11,16 +11,17 @@ int main(int argc, char *argv[])
 	btre = new BinaryNode('i', btre, h);
 	btre = new BinaryNode('f', v, btre);
 
+	std::cout << "\n\nin-order" << std::endl;
 	btre->re_intrav();
 	std::cout << std::endl;
 	btre->nre_intrav();
-	std::cout << "\nrepost" << std::endl;
+	std::cout << "\n\nre-post" << std::endl;
 	btre->re_potrav();
 	std::cout << std::endl;
 	btre->nre_potrav();
-	std::cout << "\nnumber of nodes is: " << btre->size() << std::endl;
-	std::cout << "\nThe height is: " << btre->findHeight(btre) << std::endl;
+	std::cout << "\n\nnumber of nodes is: " << btre->size() << std::endl;
+	std::cout << "\n\nThe height is: " << btre->findHeight(btre) << std::endl;
 	bool IsBalanced{ btre->IsBineryTreeBalanced(btre) };
-	if(IsBalanced) std::cout << "\nThis binarythree is Balanced" << std::endl;
-	else std::cout << "\nThis binarythree not is Balanced" << std::endl;
+	if(IsBalanced) std::cout << "\n\nThis binarythree is Balanced" << std::endl;
+	else std::cout << "\n\nThis binarythree not is Balanced" << std::endl;
 }
