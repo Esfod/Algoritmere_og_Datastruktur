@@ -9,7 +9,6 @@ public:
 	GameObject(const Vector2d& position, std::string navn);
 	Vector2d m_postion;
 	std::string m_navn;
-
 private:
 };
 
