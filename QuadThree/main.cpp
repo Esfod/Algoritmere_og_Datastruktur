@@ -3,11 +3,10 @@
 
 int main()
 {
-	QuadTree* qtree = new QuadTree(200, 200, 200, 200);
+	QuadTree* qtree = new QuadTree(200, 200, 200, 200); // x , y (cordinate for the centre of the quadtree), width , heith 
 	qtree->SubDivide();
 	qtree->nw->SubDivide();
 	qtree->ne->SubDivide();
-	qtree->ne->nw->SubDivide();
 	qtree->PrintCordinates();
 	return 0;
 }

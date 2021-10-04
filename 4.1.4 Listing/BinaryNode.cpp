@@ -41,9 +41,6 @@ void BinaryNode::insert(char data, BinaryNode* p)
 	}
 }
 
-
-
-
 void BinaryNode::re_intrav()
 {
 	if (m_left)
