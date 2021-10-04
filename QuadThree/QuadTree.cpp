@@ -1,4 +1,5 @@
 #include "QuadTree.h"
+#include <iostream>
 
 QuadTree::QuadTree(){}
 
@@ -16,10 +17,11 @@ void QuadTree::SubDivide()
 	}
 }
 
-void QuadTree::Find()
+void QuadTree::PrintCordinates()
 {
-}
-
-void QuadTree::Insert()
-{
+	std::cout << '(' << m_x - m_w << ',' << m_y - m_h << ") (" << m_x + m_w << ',' << m_y - m_h << ") (" << m_x + m_w << ',' << m_y + m_h << ") (" << m_x - m_w << ',' << m_y + m_h << ")\n" << std::endl;
+	if (ne) ne->PrintCordinates();
+	if (nw) nw->PrintCordinates();
+	if (se) se->PrintCordinates();
+	if (sw) sw->PrintCordinates();
 }
