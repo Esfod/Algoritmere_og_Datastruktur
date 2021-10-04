@@ -23,25 +23,33 @@ void BinaryNode::Pop()
 			m_data = m_right->m_data;
 			m_right->Pop();
 		}
+		if (m_data == m_right->m_data)
+			m_right = nullptr;
+		else if (m_data == m_left->m_data)
+			m_left = nullptr;
 	}
 	else if (m_right)
 	{
 		m_data = m_right->m_data;
 		m_right->Pop();
+		if (m_data == m_right->m_data)
+			m_right = nullptr;
 	}
 	else if (m_left)
 	{
 		m_data = m_left->m_data;
 		m_left->Pop();
+		if (m_data == m_left->m_data)
+			m_left = nullptr;
 	}
 }
 
 void BinaryNode::Push(int a)
 {
-	int temp{ 0 };
+	int temp { 0 };
 	if (m_data > a)
 	{
-		temp = m_data;
+		int temp = m_data;
 		m_data = a;
 	}
 }

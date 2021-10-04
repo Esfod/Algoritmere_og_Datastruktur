@@ -16,7 +16,9 @@ public:
 	void re_potrav();
 	int size();
 	char findMax(char a, char b);
-	int findHeight(BinaryNode* p);
+	char findMin(char a, char b);
+	int findHighestLeaf(BinaryNode* p);
+	int findLowestLeaf(BinaryNode* p);
 	bool IsBineryTreeBalanced(BinaryNode* p);
 
 private:

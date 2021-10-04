@@ -1,4 +1,5 @@
 ﻿  BinaryNode.cpp
   main.cpp
+C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\4.1.4 Listing\main.cpp(23,46): error C2039: 'findHeight': is not a member of 'BinaryNode'
+C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\4.1.4 Listing\BinaryNode.h(2): message : see declaration of 'BinaryNode'
   Generating Code...
-  4.1.4 Listing.vcxproj -> C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\x64\Debug\4.1.4 Listing.exe

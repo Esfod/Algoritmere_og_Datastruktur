@@ -138,21 +138,33 @@ char BinaryNode::findMax(char a, char b)
 	else
 		return b;
 }
+char BinaryNode::findMin(char a, char b)
+{
+	if (a >= b) return b;
+	else return a;
+}
 
-int BinaryNode::findHeight(BinaryNode* p)
+int BinaryNode::findHighestLeaf(BinaryNode* p)
 {
 	if (p == nullptr)
 		return 0;
 
-	return findMax(findHeight(p->m_left), findHeight(p->m_right) + 1); 
-	//travels down the right and left tree and finds the highest and +1 with account of the root
+	return findMax(findHighestLeaf(p->m_left), findHighestLeaf(p->m_right) + 1);
+}
+
+int BinaryNode::findLowestLeaf(BinaryNode* p)
+{
+	if (p == nullptr)
+		return 0;
+	
+	return findMin(findLowestLeaf(p->m_left), findLowestLeaf(p->m_right) + 1);;
 }
 
 bool BinaryNode::IsBineryTreeBalanced(BinaryNode* p)
 {
-	int l{ findHeight(p->m_left) };
-	int r{ findHeight(p->m_right) };
-	if (l - r > 2 || r - l > 2)
-		return false;
+	int high { findHighestLeaf(p) };
+	int shot { findLowestLeaf(p) };
+
+	if (high - shot >= 2) return false;
 	else return true;
 }

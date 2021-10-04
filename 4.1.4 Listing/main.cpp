@@ -1,7 +1,7 @@
 #include <iostream>
 #include "BinaryNode.h"
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
 	BinaryNode* h = new BinaryNode('d');
 	BinaryNode* v = new BinaryNode('a');
@@ -22,6 +22,6 @@ int main(int argc, char *argv[])
 	std::cout << "\n\nnumber of nodes is: " << btre->size() << std::endl;
 	std::cout << "\n\nThe height is: " << btre->findHeight(btre) << std::endl;
 	bool IsBalanced{ btre->IsBineryTreeBalanced(btre) };
-	if(IsBalanced) std::cout << "\n\nThis binarythree is Balanced" << std::endl;
+	if (IsBalanced) std::cout << "\n\nThis binarythree is Balanced" << std::endl;
 	else std::cout << "\n\nThis binarythree not is Balanced" << std::endl;
 }
