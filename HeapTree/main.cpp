@@ -15,13 +15,14 @@ int main()
 
 
 	heep->PrintByLayer();
-	/*std::cout << heep->Top() << std::endl;
+	std::cout << heep->Top() << std::endl;
 	std::cout << heep->Size() << std::endl;
+	heep->Pop();
 	heep->Pop();
 	heep->Pop();
 	std::cout << heep->Top() << std::endl;
 	std::cout << heep->Size() << std::endl;
 	
-	*/
+	
 	return 0;
 }

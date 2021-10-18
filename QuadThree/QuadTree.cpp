@@ -10,10 +10,10 @@ void QuadTree::SubDivide()
 {
 	if(IsSubDivided) return;
 	else{ 
-		ne = new QuadTree(m_x + m_w / 2, m_y + m_h / 2, m_w / 2, m_h / 2);
-		nw = new QuadTree(m_x - m_w / 2, m_y + m_h / 2, m_w / 2, m_h / 2);	
-		se = new QuadTree(m_x + m_w / 2, m_y - m_h / 2, m_w / 2, m_h / 2);
-		sw = new QuadTree(m_x - m_w / 2, m_y - m_h / 2, m_w / 2, m_h / 2);
+		ne = new QuadTree((m_x + m_w) / 2, (m_y + m_h) / 2, m_w / 2, m_h / 2);
+		nw = new QuadTree((m_x - m_w) / 2, (m_y + m_h) / 2, m_w / 2, m_h / 2);	
+		se = new QuadTree((m_x + m_w) / 2, (m_y - m_h) / 2, m_w / 2, m_h / 2);
+		sw = new QuadTree((m_x - m_w) / 2, (m_y - m_h) / 2, m_w / 2, m_h / 2);
 	}
 }
 

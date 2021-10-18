@@ -1,5 +1,5 @@
 #pragma once
-#include "Vector2d.h"
+
 class QuadTree
 {
 public:
@@ -18,4 +18,3 @@ private:
 	double m_x, m_y, m_w, m_h{ 0 };
 	bool IsSubDivided{ false };
 };
-
