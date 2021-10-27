@@ -45,6 +45,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fletting", "fletting\fletti
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "quicksort", "quicksort\quicksort.vcxproj", "{226A6AE2-12AF-4143-A033-BA37BFF7DACA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08. hashing", "08. hashing", "{1CDCDDB8-155A-45EB-9418-801185A49306}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hash test", "Hash test\Hash test.vcxproj", "{5E6068D3-112B-4E03-8066-951D851ADCD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -165,6 +169,14 @@ Global
 		{226A6AE2-12AF-4143-A033-BA37BFF7DACA}.Release|x64.Build.0 = Release|x64
 		{226A6AE2-12AF-4143-A033-BA37BFF7DACA}.Release|x86.ActiveCfg = Release|Win32
 		{226A6AE2-12AF-4143-A033-BA37BFF7DACA}.Release|x86.Build.0 = Release|Win32
+		{5E6068D3-112B-4E03-8066-951D851ADCD8}.Debug|x64.ActiveCfg = Debug|x64
+		{5E6068D3-112B-4E03-8066-951D851ADCD8}.Debug|x64.Build.0 = Debug|x64
+		{5E6068D3-112B-4E03-8066-951D851ADCD8}.Debug|x86.ActiveCfg = Debug|Win32
+		{5E6068D3-112B-4E03-8066-951D851ADCD8}.Debug|x86.Build.0 = Debug|Win32
+		{5E6068D3-112B-4E03-8066-951D851ADCD8}.Release|x64.ActiveCfg = Release|x64
+		{5E6068D3-112B-4E03-8066-951D851ADCD8}.Release|x64.Build.0 = Release|x64
+		{5E6068D3-112B-4E03-8066-951D851ADCD8}.Release|x86.ActiveCfg = Release|Win32
+		{5E6068D3-112B-4E03-8066-951D851ADCD8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -184,6 +196,7 @@ Global
 		{3EAC42AE-9269-495C-95E0-107DE4F5564C} = {2081AF34-E360-4F02-83FD-9A97F1E003AF}
 		{DD2502B5-EFB2-4A84-A36F-0C27B9EC0FD5} = {2081AF34-E360-4F02-83FD-9A97F1E003AF}
 		{226A6AE2-12AF-4143-A033-BA37BFF7DACA} = {2081AF34-E360-4F02-83FD-9A97F1E003AF}
+		{5E6068D3-112B-4E03-8066-951D851ADCD8} = {1CDCDDB8-155A-45EB-9418-801185A49306}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {77EC2BD4-35B7-44CA-AFD3-4EB7AD019832}
