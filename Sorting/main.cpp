@@ -1,7 +1,7 @@
 #include <iostream>
 #include <array>
 #include <chrono>
-#include <algorithm>
+
 
 
 const int array_size {10};

@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 	std::cout << std::endl;
 	btre->nre_potrav();
 	std::cout << "\n\nnumber of nodes is: " << btre->size() << std::endl;
-	std::cout << "\n\nThe height is: " << btre->findHeight(btre) << std::endl;
+	std::cout << "\n\nThe height is: " << btre->findHighestLeaf(btre) << std::endl;
 	bool IsBalanced{ btre->IsBineryTreeBalanced(btre) };
 	if (IsBalanced) std::cout << "\n\nThis binarythree is Balanced" << std::endl;
 	else std::cout << "\n\nThis binarythree not is Balanced" << std::endl;
