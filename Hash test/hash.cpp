@@ -26,8 +26,6 @@ void hashTable::insert(string value)
 			cout << "full" << endl;
 		}
 	}
-
-
 }
 
 void hashTable::remove(int key)

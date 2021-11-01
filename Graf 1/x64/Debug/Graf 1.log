@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\Graf 1\main.cpp(90): error C4700: uninitialized local variable 'n_d' used
+C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\Graf 1\main.cpp(91): error C4700: uninitialized local variable 'n_c' used
+C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\Graf 1\main.cpp(94): error C4700: uninitialized local variable 'n_e' used
+C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\Graf 1\main.cpp(99): error C4700: uninitialized local variable 'n_a' used
+C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\Graf 1\main.cpp(99): error C4700: uninitialized local variable 'g_a' used
+C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\Graf 1\main.cpp(103): error C4700: uninitialized local variable 'n_b' used
