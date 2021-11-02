@@ -1,6 +1,7 @@
 #include <iostream>
 #include <list>
 #include <queue>
+#include <vector>
 
 using namespace std;
 
@@ -9,7 +10,7 @@ struct Node
 {
     char m_navn;
     bool m_besokt;
-    std::list<Kant> m_kanter;
+    vector<Kant> m_kanter;
     Node(char navn) : m_navn(navn), m_besokt(false) { }
     void settinn_kant(const Kant& kant);
 };
@@ -35,7 +36,7 @@ struct Graf
 {
     std::list<Node*> noder;
     Graf() { }
-    float dijkstra(Node*, Node*);
+    pair<string, float> dijkstra(Node*, Node*);
     Node* finn_node(char navn)
     {
         for (Node* n : noder)
@@ -79,43 +80,47 @@ struct Graf
     }
 };
 
-struct Vei
-{
-    Node* nextNode(Node*);
-};
-
-Node* Vei::nextNode(Node* n)
-{
-    std::array<int, 123>;
-}
-
-float Graf::dijkstra(Node* fromNode, Node* toNode)
+pair<string,float> Graf::dijkstra(Node* fromNode, Node* toNode)
 {
     bool foundToNode{ false };
     Node* delta{ fromNode };
+    vector<vector<pair<string, float>>> dijkstraListe;
     int jk{ 0 };
     while (!foundToNode)
     {
-        for (Kant k: delta->m_kanter)
+        dijkstraListe.emplace_back();
+        for (size_t i = 0; i < fromNode->m_kanter.size(); i++)
         {
-            if (!k.m_tilnode->m_besokt)
+            if(fromNode->m_kanter[i].m_tilnode->m_besokt)
+            dijkstraListe[jk].emplace_back();
+            if (!fromNode->m_kanter[i].m_tilnode->m_besokt)
             {
-                lenght += k.m_vekt;
-                k.m_tilnode->m_besokt = true;
-                if (k.m_tilnode == toNode)
+                dijkstraListe[jk][i].second += fromNode->m_kanter[i].m_vekt;
+                dijkstraListe[jk][i].first.push_back(fromNode->m_kanter[i].m_tilnode->m_navn);
+                fromNode->m_kanter[i].m_tilnode->m_besokt = true;
+                
+                if (fromNode->m_kanter[i].m_tilnode == toNode)
                     foundToNode = true;
             }
         }
-        for (int i{0}; i < dijkstraList.size(); i++)
-        {
 
+        for (int i{ 0 }; i < dijkstraListe[jk].size(); i++)
+        {
+            for (auto j{ i + 1 }; j < dijkstraListe[jk].size(); j++)
+            {
+                if (dijkstraListe[jk][i].second > dijkstraListe[jk][j].second)
+                {
+                    std::swap(dijkstraListe[jk][i], dijkstraListe[jk][j]);
+                }
+            }
         }
+        jk++;
     }
+    return dijkstraListe[jk].front();
 }
 
 int main()
 {
-
     Graf* graf = new Graf();
 
     graf->settinn_node('A');
@@ -131,6 +136,8 @@ int main()
     graf->settinn_kant('D', 'E', 1);
     graf->settinn_kant('A', 'E', 5);
     graf->settinn_kant('C', 'E', 4);
+
+    pair<string, float> a = graf->dijkstra(graf->finn_node('A'), graf->finn_node('D'));
 
     return 0;
 }
