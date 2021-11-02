@@ -1,2 +1,3 @@
 ﻿  main.cpp
-  04. 4a,b (grafer).vcxproj -> C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\x64\Debug\04. 4a,b (grafer).exe
+C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\04. 4a,b (grafer)\main.cpp(89,25): warning C4091: '': ignored on left of 'std::array<int,123>' when no variable is declared
+C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\04. 4a,b (grafer)\main.cpp(105,17): error C2065: 'lenght': undeclared identifier

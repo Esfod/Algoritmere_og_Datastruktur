@@ -30,10 +30,12 @@ void Node::settinn_kant(const Kant& kant)
     }
     m_kanter.push_back(kant);
 }
+
 struct Graf
 {
     std::list<Node*> noder;
     Graf() { }
+    float dijkstra(Node*, Node*);
     Node* finn_node(char navn)
     {
         for (Node* n : noder)
@@ -65,10 +67,10 @@ struct Graf
             if (fra_navn == n->m_navn)
                 senderNode = n; break;
         }
-        if (!senderNode) return;
-        Kant k(vekt, mottakerNode);
 
-        senderNode->settinn_kant(k);
+        if (!senderNode) return;
+
+        senderNode->settinn_kant(Kant(vekt,mottakerNode));
     }
 
     float mst()
@@ -79,8 +81,37 @@ struct Graf
 
 struct Vei
 {
-
+    Node* nextNode(Node*);
 };
+
+Node* Vei::nextNode(Node* n)
+{
+    std::array<int, 123>;
+}
+
+float Graf::dijkstra(Node* fromNode, Node* toNode)
+{
+    bool foundToNode{ false };
+    Node* delta{ fromNode };
+    int jk{ 0 };
+    while (!foundToNode)
+    {
+        for (Kant k: delta->m_kanter)
+        {
+            if (!k.m_tilnode->m_besokt)
+            {
+                lenght += k.m_vekt;
+                k.m_tilnode->m_besokt = true;
+                if (k.m_tilnode == toNode)
+                    foundToNode = true;
+            }
+        }
+        for (int i{0}; i < dijkstraList.size(); i++)
+        {
+
+        }
+    }
+}
 
 int main()
 {
