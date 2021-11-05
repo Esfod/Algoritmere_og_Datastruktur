@@ -11,7 +11,7 @@ struct Node
 	bool m_visited = false;
 	list <Vertices> m_vertices;
 
-	Node(char &name) : m_name(name){}
+	Node(char name) : m_name(name) {}
 
 	void insertVertic(const Vertices& vertic)
 	{
@@ -82,11 +82,11 @@ void Graph::depthFirst(char name)
 
 int main()
 {
-	Node* n_a('a');
-	Node* n_b('b');
-	Node* n_c('c');
-	Node* n_d('d');
-	Node* n_e('e');
+	Node* n_a = new Node('a');
+	Node* n_b = new Node('b');
+	Node* n_c = new Node('c');
+	Node* n_d = new Node('d');
+	Node* n_e = new Node('e');
 
 	const Vertices ad(2, n_d);
 	const Vertices ac(1, n_c);
@@ -96,7 +96,8 @@ int main()
 	const Vertices de(6, n_e);
 	const Vertices ed(7, n_d);
 
-	Graph* g_a;
+	Graph* g_a = new Graph;
+
 	g_a->insertNode(n_a);
 
 	n_a->insertVertic(ad);

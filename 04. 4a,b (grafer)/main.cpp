@@ -10,7 +10,7 @@ struct Node
 {
     char m_navn;
     bool m_besokt;
-    vector<Kant> m_kanter;
+    list<Kant> m_kanter;
     Node(char navn) : m_navn(navn), m_besokt(false) { }
     void settinn_kant(const Kant& kant);
 };
@@ -36,8 +36,7 @@ struct Graf
 {
     std::list<Node*> noder;
     Graf() { }
-    pair<string, float> dijkstra(Node*, Node*);
-    void checkNodePath(Node*, Node*);
+    void dijkstra(Node*, Node*);
     Node* finn_node(char navn)
     {
         for (Node* n : noder)
@@ -45,6 +44,7 @@ struct Graf
                 return n;
         return nullptr;
     };
+
     void settinn_node(char navn)
     {
         for (Node* n:noder)
@@ -52,6 +52,7 @@ struct Graf
                 break;
         noder.push_back(new Node(navn));
     }
+
     void settinn_kant(char fra_navn, char til_navn, float vekt)
     {
 
@@ -80,16 +81,35 @@ struct Graf
         return 0;
     }
 };
-
-pair<string, float> Graf::dijkstra(Node* fraNode, Node* toNode)
+struct Vei
 {
-    bool foundToNode{ false };
-    Node* delta{ fraNode };
-    vector<pair<string, float>> dijkstraListe;
-    while (!foundToNode)
-    {
-        dijkstraListe.emplace_back();
+    vector<Kant> kanter;
+    double totalkostnad;
+};
+void Graf::dijkstra(Node* fraNode, Node* tilNode)
+{
+    priority_queue<Kant> qp;
+    priority_queue < Vei, vector<Vei>, greater<Vei> > apq;
 
+    Vei StartVei;
+    Kant StartKant{ 0.0, fraNode };
+    StartVei.kanter.push_back(StartKant);
+    StartVei.kanter.push_back(StartKant);
+    StartVei.totalkostnad = 0.0;
+    apq.push(StartVei);
+    
+    while (!apq.empty() && !tilNode->m_besokt)
+    {
+        Vei sti = apq.top();
+        apq.pop();
+
+        if (!tilNode->m_besokt)
+        {
+           
+        }
+
+
+        /*
         for (size_t i = 0; i < delta->m_kanter.size(); i++)
         {
             if (!delta->m_kanter[i].m_tilnode->m_besokt)
@@ -110,22 +130,9 @@ pair<string, float> Graf::dijkstra(Node* fraNode, Node* toNode)
                 delta = delta->m_kanter[i].m_tilnode;
             }
         }
+
+        */
     }
-
-    for (int i{ 0 }; i < dijkstraListe.size(); i++)
-    {
-        for (int j{ i + 1 }; j < dijkstraListe.size(); j++)
-        {
-            if (dijkstraListe[i].second > dijkstraListe[j].second)
-                swap(dijkstraListe[i], dijkstraListe[j]);
-        }
-    }
-    return dijkstraListe.front();
-}
-
-void Graf::checkNodePath(Node* fraNode, Node* tilNode)
-{
-
 }
 
 int main()
@@ -146,7 +153,7 @@ int main()
     graf->settinn_kant('A', 'E', 5);
     graf->settinn_kant('C', 'E', 4);
 
-    pair<string, float> a = graf->dijkstra(graf->finn_node('A'), graf->finn_node('D'));
+    graf->dijkstra(graf->finn_node('A'), graf->finn_node('D'));
 
     return 0;
 }

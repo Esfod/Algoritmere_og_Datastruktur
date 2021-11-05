@@ -1,2 +1,18 @@
 ﻿  main.cpp
-  04. 4a,b (grafer).vcxproj -> C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\x64\Debug\04. 4a,b (grafer).exe
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstddef(115,22): error C2676: binary '>': 'const _Ty' does not define this operator or a conversion to a type acceptable to the predefined operator
+          with
+          [
+              _Ty=Vei
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstddef(114): message : while compiling class template member function 'bool std::greater<Vei>::operator ()(const _Ty &,const _Ty &) const'
+          with
+          [
+              _Ty=Vei
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(1518): message : see reference to function template instantiation 'bool std::greater<Vei>::operator ()(const _Ty &,const _Ty &) const' being compiled
+          with
+          [
+              _Ty=Vei
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\queue(295): message : see reference to class template instantiation 'std::greater<Vei>' being compiled
+C:\Users\esfod\OneDrive\Skrivebord\Week10\Algoritmere_og_Datastruktur\04. 4a,b (grafer)\main.cpp(90): message : see reference to class template instantiation 'std::priority_queue<Vei,std::vector<Vei,std::allocator<Vei>>,std::greater<Vei>>' being compiled
