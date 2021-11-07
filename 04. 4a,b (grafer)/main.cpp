@@ -59,8 +59,12 @@ struct Graf
         Node* senderNode{ nullptr }, *mottakerNode{ nullptr };
         for (Node* n : noder)
         {
-            if (fra_navn == n->m_navn)
-                mottakerNode = n; break;
+            if (til_navn == n->m_navn)
+            {
+                mottakerNode = n;
+                break;
+            }
+                
         }
 
         if (!mottakerNode) return;
@@ -68,7 +72,11 @@ struct Graf
         for (Node* n : noder)
         {
             if (fra_navn == n->m_navn)
-                senderNode = n; break;
+            {
+                senderNode = n;
+                break;
+            }
+                
         }
 
         if (!senderNode) return;
@@ -81,35 +89,55 @@ struct Graf
         return 0;
     }
 };
-struct Vei
+struct Sti
 {
     vector<Kant> kanter;
-    double totalkostnad;
+    double totalkostnad = 0;
+    bool operator>(const Sti& AnnenSti) const { return totalkostnad > AnnenSti.totalkostnad; }
+    void SettNoderBesokt();
+    void SettNoderikkeBesokt();
 };
-void Graf::dijkstra(Node* fraNode, Node* tilNode)
+void Graf::dijkstra(Node* start, Node* slutt)
 {
-    priority_queue<Kant> qp;
-    priority_queue < Vei, vector<Vei>, greater<Vei> > apq;
+    priority_queue < Sti, vector<Sti>, greater<Sti> > sluttprodukt;
+    priority_queue < Sti, vector<Sti>, greater<Sti> > apq;
 
-    Vei StartVei;
-    Kant StartKant{ 0.0, fraNode };
-    StartVei.kanter.push_back(StartKant);
-    StartVei.kanter.push_back(StartKant);
-    StartVei.totalkostnad = 0.0;
-    apq.push(StartVei);
+    Sti startSti;
+    Kant startKant{ 0.0, start };
+    startSti.kanter.push_back(startKant);
+    startSti.totalkostnad = 0.0;
+    apq.push(startSti);
     
-    while (!apq.empty() && !tilNode->m_besokt)
+    while (!apq.empty())
     {
-        Vei sti = apq.top();
-        apq.pop();
-
-        if (!tilNode->m_besokt)
+        for (Kant k : apq.top().kanter.back().m_tilnode->m_kanter)
         {
-           
+            Sti sti = apq.top();
+            apq.pop();
+            sti.SettNoderBesokt();
+            if (!k.m_tilnode->m_besokt)
+            {
+                sti.kanter.push_back(k);
+                sti.totalkostnad += k.m_vekt;
+                k.m_tilnode->m_besokt = true;
+                if (!slutt->m_besokt)
+                    apq.push(sti);
+                else
+                {
+                    sluttprodukt.push(sti);
+                    slutt->m_besokt = false;
+                }
+            }
+            sti.SettNoderikkeBesokt();
         }
+    }
 
-
-        /*
+    for (Kant k: sluttprodukt.top().kanter)
+    {
+        cout << k.m_tilnode->m_navn << " ";
+    }
+    cout << sluttprodukt.top().totalkostnad;
+    /*
         for (size_t i = 0; i < delta->m_kanter.size(); i++)
         {
             if (!delta->m_kanter[i].m_tilnode->m_besokt)
@@ -132,8 +160,23 @@ void Graf::dijkstra(Node* fraNode, Node* tilNode)
         }
 
         */
+}
+
+void Sti::SettNoderBesokt()
+{
+    for (Kant k : kanter)
+    {
+        k.m_tilnode->m_besokt = true;
     }
 }
+void Sti::SettNoderikkeBesokt()
+{
+    for (Kant k : kanter)
+    {
+        k.m_tilnode->m_besokt = false;
+    }
+}
+
 
 int main()
 {
@@ -148,12 +191,12 @@ int main()
     graf->settinn_kant('A', 'B', 1);
     graf->settinn_kant('A', 'C', 2);
     graf->settinn_kant('B', 'C', 2);
-    graf->settinn_kant('C', 'B', 3);
+    graf->settinn_kant('C', 'D', 3);
     graf->settinn_kant('D', 'E', 1);
     graf->settinn_kant('A', 'E', 5);
     graf->settinn_kant('C', 'E', 4);
 
-    graf->dijkstra(graf->finn_node('A'), graf->finn_node('D'));
+    graf->dijkstra(graf->finn_node('A'), graf->finn_node('C'));
 
     return 0;
 }
