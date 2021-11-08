@@ -110,21 +110,26 @@ void Graf::dijkstra(Node* start, Node* slutt)
     
     while (!apq.empty())
     {
-        for (Kant k : apq.top().kanter.back().m_tilnode->m_kanter)
+        Sti sti = apq.top();
+        apq.pop();
+        for (Kant k : sti.kanter.back().m_tilnode->m_kanter)
         {
-            Sti sti = apq.top();
-            apq.pop();
             sti.SettNoderBesokt();
+            if (k.m_tilnode->m_navn == 'C')
+            {
+
+            }
             if (!k.m_tilnode->m_besokt)
             {
-                sti.kanter.push_back(k);
-                sti.totalkostnad += k.m_vekt;
+                Sti copysti = sti;
+                copysti.kanter.push_back(k);
+                copysti.totalkostnad += k.m_vekt;
                 k.m_tilnode->m_besokt = true;
                 if (!slutt->m_besokt)
-                    apq.push(sti);
+                    apq.push(copysti);
                 else
                 {
-                    sluttprodukt.push(sti);
+                    sluttprodukt.push(copysti);
                     slutt->m_besokt = false;
                 }
             }
@@ -196,7 +201,7 @@ int main()
     graf->settinn_kant('A', 'E', 5);
     graf->settinn_kant('C', 'E', 4);
 
-    graf->dijkstra(graf->finn_node('A'), graf->finn_node('C'));
+    graf->dijkstra(graf->finn_node('A'), graf->finn_node('E'));
 
     return 0;
 }
