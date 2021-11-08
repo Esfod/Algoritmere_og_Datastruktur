@@ -10,6 +10,7 @@ void printarray(int a[])
     }
     cout << endl;
 }
+
 void quick_rec(int a[], int left, int right)
 {
     if (left < right) // left+10 <=right i boka

@@ -115,10 +115,6 @@ void Graf::dijkstra(Node* start, Node* slutt)
         for (Kant k : sti.kanter.back().m_tilnode->m_kanter)
         {
             sti.SettNoderBesokt();
-            if (k.m_tilnode->m_navn == 'C')
-            {
-
-            }
             if (!k.m_tilnode->m_besokt)
             {
                 Sti copysti = sti;

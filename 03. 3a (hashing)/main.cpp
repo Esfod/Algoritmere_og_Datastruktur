@@ -5,8 +5,8 @@ using namespace std;
 struct Test {
 	int key;
 	string name;
-	Test(int k, string s) : key(k), name(s) {}
 	bool operator == (const Test& t2) const { return key == t2.key; }
+	Test(int k, string s) : key(k), name(s) {}
 };
 
 template<>
