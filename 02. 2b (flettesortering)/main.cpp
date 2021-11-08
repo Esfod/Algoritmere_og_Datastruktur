@@ -8,7 +8,6 @@ void printarray(int a[])
     {
         cout << a[i] << " ";
     }
-    cout << endl;
 }
 
 void quick_rec(int a[], int left, int right)
@@ -23,7 +22,8 @@ void quick_rec(int a[], int left, int right)
             while (pivot < a[j]) { j--; } // funnet 1. fra høyre <= pivot
             if (i < j)
             {
-                printarray(a);
+                printarray(a);  
+                cout << "\tleft: " << left << " right: " << right << " pivot: " << pivot << " \ti: " << i << " j: " << j << endl;
                 swap(a[i], a[j]);   // på riktig side av pivot
             }
             else
@@ -32,7 +32,10 @@ void quick_rec(int a[], int left, int right)
         quick_rec(a, left, i - 1);
         quick_rec(a, i + 1, right);
     }
-    if (left == 0 && right == 8) printarray(a);
+    if (left == 0 && right == 8) {
+        printarray(a);
+        cout << endl;
+    }
 }
 
 int main()

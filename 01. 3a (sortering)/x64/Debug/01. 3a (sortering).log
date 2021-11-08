@@ -1,1 +1,3 @@
-﻿  01. 3a (sortering).vcxproj -> C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\x64\Debug\01. 3a (sortering).exe
+﻿  main.cpp
+C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\01. 3a (sortering)\main.cpp(84,64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  01. 3a (sortering).vcxproj -> C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\x64\Debug\01. 3a (sortering).exe
