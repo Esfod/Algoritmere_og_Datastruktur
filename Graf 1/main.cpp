@@ -60,7 +60,6 @@ struct Graph
 	Node* findNode(char name);
 	void insertNode(Node* name);
 	//void insertVertic(char from_name, char to_name, float cost);
-	void depthFirst(char name);
 	//float mst();
 };
 
@@ -74,11 +73,6 @@ Node* Graph::findNode(char name)
 	return nullptr;
 }
 
-void Graph::depthFirst(char name)
-{
-	if (!nodes.empty())
-		nodes.front()->depthFirst();
-}
 
 int main()
 {

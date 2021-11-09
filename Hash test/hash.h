@@ -9,19 +9,27 @@ using namespace std;
 class hashTable
 {
 private:
-	static const int hashListLenght = 10;
-	static const int hashListHeight = 3;
-	array<array<pair<int, string>,hashListHeight>, hashListLenght> table;
+	static const int sizeOfTable = 15;
+	static const int numbOfValues = 3;
+
+	struct hashValues
+	{
+		int key{ sizeOfTable + 1 };
+		array<string, numbOfValues> values { "" };
+	};
+
+	array<hashValues,sizeOfTable> table;
+
+	int hashFunction(string key);
+	int reHash1(string key);
+	bool IsValuesFull(int key);
 
 public:
-	int hashFunction(string key);
-	int reHash(string key);
+	hashTable();
 	void insert(string value);
-	void remove(int key);
+	void remove(string key);
 	bool IsEmpty() const;
-	bool IsQueueFull(int key);
 	void PrintTable();
-	void Find(int key);
-	
+	int Find(string key);
 };
 

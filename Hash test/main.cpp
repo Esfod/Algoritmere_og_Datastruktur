@@ -3,8 +3,18 @@
 
 int main()
 {
-	hashTable myHash;
+	hashTable* myHash = new hashTable();
 
-	myHash.IsEmpty();
+	bool isHashEmpty = myHash->IsEmpty();
+
+	myHash->insert("hei");
+	myHash->insert("hei");
+	myHash->insert("pølsefest");
+	myHash->insert("hei");
+
+	myHash->PrintTable();
+
+	isHashEmpty = myHash->IsEmpty();
+	
 	return 0;
 }
