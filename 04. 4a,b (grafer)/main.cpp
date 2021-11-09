@@ -89,6 +89,7 @@ struct Graf
         return 0;
     }
 };
+
 struct Sti
 {
     vector<Kant> kanter;
@@ -97,6 +98,7 @@ struct Sti
     void SettNoderBesokt();
     void SettNoderikkeBesokt();
 };
+
 void Graf::dijkstra(Node* start, Node* slutt)
 {
     priority_queue < Sti, vector<Sti>, greater<Sti> > sluttprodukt;
