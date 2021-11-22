@@ -1,2 +1,7 @@
-﻿  main.cpp
+﻿  hash.cpp
+C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\Hash test\hash.cpp(8,19): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\Hash test\hash.cpp(34,31): warning C4390: ';': empty controlled statement found; is this the intent?
+  main.cpp
+  Generating Code...
+C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\Hash test\hash.cpp(140): warning C4715: 'hashTable::Find': not all control paths return a value
   Hash test.vcxproj -> C:\TIING SOM SKAL TIL bærbar ssd\Algoritmere_og_Datastruktur\x64\Debug\Hash test.exe
