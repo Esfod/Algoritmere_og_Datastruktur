@@ -10,7 +10,7 @@ void printarray(int a[])
     }
 }
 
-void quick_rec(int a[], int left, int right)
+void quick_rec(int a[], int left, int right)//this was wrong it is suposed to be mergesort u imbasille
 {
     if (left < right) // left+10 <=right i boka
     {
